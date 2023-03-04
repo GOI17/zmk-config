@@ -1,8 +1,18 @@
-#define Lower_layer {
-      bindings = <
-        &kp TAB    &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5  &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp BACKSPACE
-        &trans     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans       &trans
-        &kp LSHIFT &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans       &trans       &trans
-                                             &kp LGUI     &trans       &kp SPACE     &kp RETURN   &tog BLUETOOTH &kp RALT 
-      >;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#include "name-codes.h"
+
+/ {
+    keymap {
+        compatible = "zmk, keymap";
+        Lower_layer {
+            bindings = <
+                &kp TAB    &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5  &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp BACKSPACE
+                &trans     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans       &trans
+                &kp LSHIFT &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans       &trans       &trans
+                                                     &kp LGUI     &trans       &kp SPACE     &kp RETURN   &tog BLUETOOTH &kp RALT 
+            >;
+        };
     };
+}
