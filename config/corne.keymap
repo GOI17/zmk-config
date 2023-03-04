@@ -1,15 +1,15 @@
-# ZMK
+// ZMK
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-# Layers
+// Layers
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define BLUETOOTH 3
 
-# Bluetooth shortcuts
+// Bluetooth shortcuts
 #define BD1 &bt BT_SEL 1
 #define BD2 &bt BT_SEL 2
 #define BD3 &bt BT_SEL 3
@@ -17,7 +17,7 @@
 #define BD5 &bt BT_SEL 5
 #define CBT &bt BT_CLR
 
-# Keycodes remap
+// Keycodes remap
 #define ___ &trans
 #define XXX &none
 
