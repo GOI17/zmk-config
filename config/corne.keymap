@@ -5,21 +5,12 @@
 
 # Custom
 #include "layers/default.keymap"
-#include "layers/lower.keymap"
-#include "layers/raise.keymap"
-#include "layers/bluetooth.keymap"
-
-#define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define BLUETOOTH 3
+# #include "layers/lower.keymap"
+# #include "layers/raise.keymap"
+# #include "layers/bluetooth.keymap"
 
 / {
   keymap {
     compatible = "zmk,keymap";
-    Base_layer = Base_layer; 
-    Lower_layer = Lower_layer; 
-    Raise_layer = Raise_layer;
-    Bluetooth_layer = Bluetooth_layer;
   };
 };
