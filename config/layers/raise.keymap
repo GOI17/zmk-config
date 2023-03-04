@@ -1,8 +1,0 @@
-#define Raise_layer {
-      bindings = <
-        &kp TAB    &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT   &kp CARET      &kp AMPERSAND &kp ASTERISK      &kp LPARENTHESIS &kp RPARENTHESIS &kp BACKSPACE
-        &kp LCTRL  &trans          &trans      &trans   &trans     &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET  &kp RBRACKET     &kp BACKSLASH    &kp GRAVE
-        &kp LSHIFT &trans          &trans      &trans   &trans     &trans        &kp UNDERSCORE &kp PLUS      &kp LBRACE        &kp RBRACE       &kp PIPE         &kp TILDE             
-                                               &kp LGUI &trans     &kp SPACE     &kp RETURN     &trans        &kp RALT 
-      >;
-    };
