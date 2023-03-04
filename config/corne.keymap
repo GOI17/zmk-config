@@ -1,8 +1,13 @@
+# ZMK
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <layers/default.keymap>
-#include <layers/lower.keymap>
+
+# Custom
+#include "layers/default.keymap"
+#include "layers/lower.keymap"
+#include "layers/raise.keymap"
+#include "layers/bluetooth.keymap"
 
 #define BASE 0
 #define LOWER 1
