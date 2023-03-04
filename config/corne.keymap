@@ -17,9 +17,9 @@
 / {
   keymap {
     compatible = "zmk,keymap";
-    Base_layer; 
-    Lower_layer; 
-    Raise_layer;
-    Bluetooth_layer;
+    Base_layer = Base_layer; 
+    Lower_layer = Lower_layer; 
+    Raise_layer = Raise_layer;
+    Bluetooth_layer = Bluetooth_layer;
   };
 };
