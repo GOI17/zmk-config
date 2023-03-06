@@ -110,9 +110,9 @@
 
         Config_layer {
             //   .---------------------------------------------------------.                    .-------------------------------------------------.
-            //   |BT_CLR  |BT_0   |BT_1   | BT_2   |BT_3   |BT_4           |                    |RGBBRI-|RGBBRI+|WH_LEFT|WH_RIGH|WH_DOWN| WH_UP   |
+            //   |        |BT_0   |BT_1   | BT_2   |BT_3   |BT_4           |                    |RGBBRI-|RGBBRI+|WH_LEFT|WH_RIGH|WH_DOWN| WH_UP   |
             //   |--------+-------+-------+--------+-------+---------------|                    |-------+-------+-------+-------+-------+---------|
-            //   |        |       |       |        |       |OUT_TOG        |                    |RGBSAT-|RGBSAT+|       |       |       |         |
+            //   |        |       |       |        |BT_CLR |OUT_TOG        |                    |RGBSAT-|RGBSAT+|       |       |       |         |
             //   |--------+-------+-------+--------+-------+---------------|                    |-------+-------+-------+-------+-------+---------|
             //   |        |       |       |        |       |               |                    |RGBHUE-|RGBHUE+|       |       |       |         |
             //   '---------------------------------------------------------|                    |-------------------------------------------------'
@@ -120,8 +120,8 @@
             //                            '--------------------------------'                    '--------------------------------'
             label = "config";
             bindings = <
-                 BC  BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset          XXX     XXX  XXX
-                 XXX XXX XXX XXX XXX &out OUT_TOG          &rgb_ug RGB_BRD    &rgb_ug RGB_BRI  XXX             XXX     XXX  XXX
+                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset          XXX     XXX  XXX
+                 XXX XXX XXX XXX BC  &out OUT_TOG          &rgb_ug RGB_BRD    &rgb_ug RGB_BRI  XXX             XXX     XXX  XXX
                  XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD    &rgb_ug RGB_SAI  XXX             XXX     XXX  XXX
                              XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
             >;
