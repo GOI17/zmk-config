@@ -126,4 +126,5 @@
                              XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
             >;
         };
-};
+     };
+  };
