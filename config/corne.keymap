@@ -19,7 +19,7 @@
 #define BD3 &bt BT_SEL 3
 #define BD4 &bt BT_SEL 4
 #define BD5 &bt BT_SEL 5
-#define CBT &bt BT_CLR
+#define BC &bt BT_CLR
 
 // Keycodes remap
 #define ___ &trans
@@ -120,10 +120,10 @@
             //                            '--------------------------------'                    '--------------------------------'
             label = "config";
             bindings = <
-                 &bt BT_CLR  &bt BT(0) &bt BT(1) &bt BT(2)    &bt BT(3)    &bt BT(4)             &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset          XXX     XXX  XXX
-                 XXX         XXX       XXX       XXX          XXX          &out OUT_TOG          &rgb_ug RGB_BRD    &rgb_ug RGB_BRI  XXX             XXX     XXX  XXX
-                 XXX         XXX       XXX       XXX          XXX          XXX                   &rgb_ug RGB_SAD    &rgb_ug RGB_SAI  XXX             XXX     XXX  XXX
-                                                 XXX          XXX          &ext_power EP_TOG     &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
+                 BC  BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset          XXX     XXX  XXX
+                 XXX XXX XXX XXX XXX &out OUT_TOG          &rgb_ug RGB_BRD    &rgb_ug RGB_BRI  XXX             XXX     XXX  XXX
+                 XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD    &rgb_ug RGB_SAI  XXX             XXX     XXX  XXX
+                             XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
             >;
         };
 };
