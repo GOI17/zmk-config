@@ -1,2 +1,2 @@
-# Kim's ZMK Config
+# ZMK Config
 
