@@ -51,28 +51,9 @@
                 >;
         };
 
-        Symbol_layer {
-            //    .-----------------------------------------------------------------.       .-------------------------------------------------------------------------------.
-            //    |  TAB  |       !       |    @    |    #    |     $    |     %    |       |      ^      |      &     |      *       |   (   |        )     |   BACKSPC    |
-            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
-            //    | LCTRL |               |         |         |          |          |       |      -      |      =     |      [       |   ]   |        \     |      `       |
-            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
-            //    | LALT  |               |         |         |          |          |       |      -      |      +     |       {      |   }   |        |     |      ~       |
-            //    '---------------------------------+---------+---------------------|       |-------------+------------+----------------------------------------------------'
-            //                                      |   LGUI  |          |   SPACE  |       |    RETURN   |            |     RALT     |
-            //                                      '-------------------------------'       '-----------------------------------------'
-            label = "symbol";
-            bindings = <
-                &kp TAB   &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT       &kp CARET      &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RPAR      &kp BACKSPACE
-                &kp LCTRL ___             ___         ___      ___        ___               &kp MINUS      &kp EQUAL     &kp LBKT     &kp RBKT &kp BACKSLASH &kp GRAVE
-                &kp LALT  ___             ___         ___      ___        ___               &kp UNDERSCORE &kp PLUS      &kp LBRC     &kp RBRC &kp PIPE      &kp TILDE             
-                                                       &kp LGUI ___     &kp SPACE           &kp RETURN     ___           &kp RALT 
-            >;
-        };
-
         Number_layer {
             //    .------------------------------------------------------------------------.       .------------------------------------------------------------------------------.
-            //    |  TAB   |     1     |     2      |    3      |      4      |      5     |       |      6     |      7    |      8     |      9      |      0    |   BACKSPC    |
+            //    |  TAB   |     1     |     2      |    3      |      4      |      5     |       |      6     |      7    |      8     |      9      |      0    |      DEL     |
             //    |--------+-----------+------------+-----------+--------------------------|       |------------+-----------+------------+-------------+-----------+--------------|
             //    |        |           |            |           |             |            |       |    LEFT    |    DOWN   |     UP     |    RIGHT    |           |              |
             //    |--------+-----------+------------+-----------+--------------------------|       |------------+-----------+------------+-------------+-----------+--------------|
@@ -82,13 +63,32 @@
             //                                      '--------------------------------------'       '-------------------------------------'
             label = "numpad";
             bindings = <
-                &kp TAB    &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5         &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp BACKSPACE
-                ___        ___          ___          ___          ___          ___                  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    ___          ___ 
-                &kp LSHIFT ___          ___          ___          ___          ___                  ___          ___          ___          ___          ___          ___ 
-                                                     &kp LGUI     ___          &kp SPACE            &kp RETURN   ___          &kp RALT 
+                &kp TAB   &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5         &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
+                &kp LCTRL ___          ___          ___          ___          ___                  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    ___          ___ 
+                &kp LALT  ___          ___          ___          ___          ___                  ___          ___          ___          ___          ___          ___ 
+                                                    &kp LGUI     ___          &kp SPACE            &kp RETURN   ___          &kp RALT 
             >;
         };
 
+        Symbol_layer {
+            //    .-----------------------------------------------------------------.       .-------------------------------------------------------------------------------.
+            //    |  TAB  |       !       |    @    |    #    |     $    |     %    |       |      ^      |      &     |      *       |   (   |        )     |     DEL      |
+            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
+            //    | LCTRL |               |         |         |          |          |       |      -      |      =     |      [       |   ]   |        \     |      `       |
+            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
+            //    | LALT  |               |         |         |          |          |       |      -      |      +     |       {      |   }   |        |     |      ~       |
+            //    '---------------------------------+---------+---------------------|       |-------------+------------+----------------------------------------------------'
+            //                                      |   LGUI  |          |   SPACE  |       |    RETURN   |            |     RALT     |
+            //                                      '-------------------------------'       '-----------------------------------------'
+            label = "symbol";
+            bindings = <
+                &kp TAB   &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT       &kp CARET      &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RPAR      &kp DEL
+                &kp LCTRL ___             ___         ___      ___        ___               &kp MINUS      &kp EQUAL     &kp LBKT     &kp RBKT &kp BACKSLASH &kp GRAVE
+                &kp LALT  ___             ___         ___      ___        ___               &kp UNDERSCORE &kp PLUS      &kp LBRC     &kp RBRC &kp PIPE      &kp TILDE             
+                                                      &kp LGUI ___        &kp SPACE         &kp RETURN     ___           &kp RALT 
+            >;
+        };
+        
         Function_layer {
             //    .------------------------------------.       .-----------------------.
             //    |    F1  |  F2  |  F3  |   F4  |  |  |       |   |   |   |   |   |   |
@@ -101,7 +101,7 @@
             //                           '-------------'       '-----------'
             label = "function";
             bindings = <
-                &kp F1  &kp F2  &kp F3  &kp F4  &kp C_BRI_UP &kp C_BRI_DN       &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_NEXT &kp C_PREVIOUS &kp C_PLAY_PAUSE 
+                &kp F1  &kp F2  &kp F3  &kp F4  &kp C_BRI_DN &kp C_BRI_UP       &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &kp C_PREVIOUS &kp C_NEXT &kp C_PLAY_PAUSE 
                 &kp F5  &kp F6  &kp F7  &kp F8  ___          ___                ___          ___          ___        ___        ___            ___
                 &kp F9  &kp F10 &kp F11 &kp F12 ___          ___                ___          ___          ___        ___        ___            ___
                                         ___     ___          ___                ___          ___          ___
@@ -120,8 +120,8 @@
             //                            '--------------------------------'                    '--------------------------------'
             label = "config";
             bindings = <
-                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD &rgb_ug RGB_HUI &reset          XXX     XXX  XXX
-                 XXX XXX XXX XXX XXX &out OUT_TOG          &rgb_ug RGB_BRD &rgb_ug RGB_BRI XXX             XXX     XXX  XXX
+                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD &rgb_ug RGB_HUI XXX             XXX     XXX  XXX
+                 XXX XXX XXX XXX BC  &out OUT_TOG          &rgb_ug RGB_BRD &rgb_ug RGB_BRI XXX             XXX     XXX  XXX
                  XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD &rgb_ug RGB_SAI XXX             XXX     XXX  XXX
                              XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_TOG
             >;
