@@ -14,11 +14,11 @@
 #define CONFIG 4
 
 // Bluetooth shortcuts
-#define BD1 &bt BT_SEL 1
-#define BD2 &bt BT_SEL 2
-#define BD3 &bt BT_SEL 3
-#define BD4 &bt BT_SEL 4
-#define BD5 &bt BT_SEL 5
+#define BD1 &bt BT_SEL 0
+#define BD2 &bt BT_SEL 1
+#define BD3 &bt BT_SEL 2
+#define BD4 &bt BT_SEL 3
+#define BD5 &bt BT_SEL 4
 #define BC &bt BT_CLR
 
 // Keycodes remap
@@ -51,6 +51,25 @@
                 >;
         };
 
+        Symbol_layer {
+            //    .-----------------------------------------------------------------.       .-------------------------------------------------------------------------------.
+            //    |  TAB  |       !       |    @    |    #    |     $    |     %    |       |      ^      |      &     |      *       |   (   |        )     |   BACKSPC    |
+            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
+            //    | LCTRL |               |         |         |          |          |       |      -      |      =     |      [       |   ]   |        \     |      `       |
+            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
+            //    | LALT  |               |         |         |          |          |       |      -      |      +     |       {      |   }   |        |     |      ~       |
+            //    '---------------------------------+---------+---------------------|       |-------------+------------+----------------------------------------------------'
+            //                                      |   LGUI  |          |   SPACE  |       |    RETURN   |            |     RALT     |
+            //                                      '-------------------------------'       '-----------------------------------------'
+            label = "symbol";
+            bindings = <
+                &kp TAB   &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT       &kp CARET      &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RPAR      &kp BACKSPACE
+                &kp LCTRL ___             ___         ___      ___        ___               &kp MINUS      &kp EQUAL     &kp LBKT     &kp RBKT &kp BACKSLASH &kp GRAVE
+                &kp LALT  ___             ___         ___      ___        ___               &kp UNDERSCORE &kp PLUS      &kp LBRC     &kp RBRC &kp PIPE      &kp TILDE             
+                                                       &kp LGUI ___     &kp SPACE           &kp RETURN     ___           &kp RALT 
+            >;
+        };
+
         Number_layer {
             //    .------------------------------------------------------------------------.       .------------------------------------------------------------------------------.
             //    |  TAB   |     1     |     2      |    3      |      4      |      5     |       |      6     |      7    |      8     |      9      |      0    |   BACKSPC    |
@@ -68,25 +87,6 @@
                 &kp LSHIFT ___          ___          ___          ___          ___                  ___          ___          ___          ___          ___          ___ 
                                                      &kp LGUI     ___          &kp SPACE            &kp RETURN   ___          &kp RALT 
             >;
-        };
-
-        Symbol_layer {
-            //    .-----------------------------------------------------------------.       .-------------------------------------------------------------------------------.
-            //    |  TAB  |       !       |    @    |    #    |     $    |     %    |       |      ^      |      &     |      *       |   (   |        )     |   BACKSPC    |
-            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
-            //    | LCTRL |               |         |         |          |          |       |      -      |      =     |      [       |   ]   |        \     |      `       |
-            //    |-------+---------------+---------+---------+----------+----------|       |-------------+------------+--------------+-------+--------------+--------------|
-            //    | LALT  |               |         |         |          |          |       |      -      |      +     |       {      |   }   |        |     |      ~       |
-            //    '---------------------------------+---------+---------------------|       |-------------+------------+----------------------------------------------------'
-            //                                      |   LGUI  |          |   SPACE  |       |    RETURN   |            |     RALT     |
-            //                                      '-------------------------------'       '-----------------------------------------'
-            label = "symbol";
-            bindings = <
-                &kp TAB   &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT       &kp CARET      &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RPAR      &kp BACKSPACE
-                &kp LCTRL ___             ___         ___      ___        ___               &kp MINUS      &kp EQUAL     &kp LBKT     &kp RBKT &kp BACKSLASH &kp GRAVE
-                &kp LALT  ___             ___         ___      ___        ___               &kp UNDERSCORE &kp PLUS      &kp LBRC     &kp RBRC &kp PIPE      &kp TILDE             
-                &kp LGUI ___     &kp SPACE           &kp RETURN     ___           &kp RALT 
-                >;
         };
 
         Function_layer {
@@ -120,10 +120,10 @@
             //                            '--------------------------------'                    '--------------------------------'
             label = "config";
             bindings = <
-                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset          XXX     XXX  XXX
-                 XXX XXX XXX XXX BC  &out OUT_TOG          &rgb_ug RGB_BRD    &rgb_ug RGB_BRI  XXX             XXX     XXX  XXX
-                 XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD    &rgb_ug RGB_SAI  XXX             XXX     XXX  XXX
-                             XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
+                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD &rgb_ug RGB_HUI &reset          XXX     XXX  XXX
+                 XXX XXX XXX XXX XXX &out OUT_TOG          &rgb_ug RGB_BRD &rgb_ug RGB_BRI XXX             XXX     XXX  XXX
+                 XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD &rgb_ug RGB_SAI XXX             XXX     XXX  XXX
+                             XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_TOG
             >;
         };
      };
