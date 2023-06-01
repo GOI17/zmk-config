@@ -120,9 +120,9 @@
             //                            '--------------------------------'                    '--------------------------------'
             label = "config";
             bindings = <
-                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD &rgb_ug RGB_HUI XXX             XXX     XXX  XXX
-                 XXX XXX XXX XXX BC  &out OUT_TOG          &rgb_ug RGB_BRD &rgb_ug RGB_BRI XXX             XXX     XXX  XXX
-                 XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD &rgb_ug RGB_SAI XXX             XXX     XXX  XXX
+                 XXX BD1 BD2 BD3 BD4 BD5                   &rgb_ug RGB_HUD &rgb_ug RGB_HUI XXX             XXX XXX XXX
+                 XXX XXX XXX XXX BC  &out OUT_TOG          &out OUT_TOG    &rgb_ug RGB_BRD &rgb_ug RGB_BRI XXX XXX XXX
+                 XXX XXX XXX XXX XXX XXX                   &rgb_ug RGB_SAD &rgb_ug RGB_SAI XXX             XXX XXX XXX
                              XXX XXX &ext_power EP_TOG     &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_TOG
             >;
         };
