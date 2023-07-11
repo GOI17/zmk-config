@@ -7,7 +7,7 @@
 
 / {
   macros {
-    pwdmanager_macro
-    login_macro
+    pwdmanager_macro;
+    login_macro;
   };
 };
