@@ -7,7 +7,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // Macros
-#include "macros/macos.h"
 #include "macros/global.h"
 
 // Layers
