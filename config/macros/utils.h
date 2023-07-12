@@ -1,5 +1,7 @@
+#include <behaviors.dtsi>
+
 #define create_macro(name, keys)           \
-    name: name##_macro {                   \
+    name: name {                           \
         label = #name;                     \
         compatible = "zmk,behavior-macro"; \
         wait-ms = <1>;                     \
