@@ -1,4 +1,6 @@
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+
 #include "utils.h"
 
 / {
