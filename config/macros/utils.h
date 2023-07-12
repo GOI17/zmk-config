@@ -1,6 +1,6 @@
 #define create_macro(name, keys)    \
-name: name##_macro {                \
-	label = #name;                    \
+name: #name {                       \
+	label = ZM_##name;                    \
 	compatible = "zmk,behavior-macro";\
 	#binding-cells = <0>;             \
 	tap-ms = <1>;                     \
