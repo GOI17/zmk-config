@@ -1,5 +1,5 @@
 #define create_macro(name, keys)    \
-name: name##_macro {                \
+name: #name {                       \
 	label = #name;                    \
 	compatible = "zmk,behavior-macro";\
 	#binding-cells = <0>;             \
