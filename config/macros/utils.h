@@ -1,8 +1,9 @@
-void create_macro(name, keys) {
-  ZMK_MACRO(name,
-      label = name;
-      tap-ms = <1>;
-      wait-ms = <1>;
-      bindings = <keys>;
-  )
-}
+#define create_macro(name, keys)           \
+    name: name##_macro {                   \
+        label = #name;                     \
+        compatible = "zmk,behavior-macro"; \
+        wait-ms = <1>;                     \
+        tap-ms = <1>;                      \
+        #binding-cells = <0>;              \
+        bindings = <keys>;                 \
+    };
