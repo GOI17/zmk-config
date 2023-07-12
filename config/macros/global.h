@@ -9,9 +9,7 @@
                   tap-ms = <1>;
                   wait-ms = <1>;
                   bindings
-                    = <&macro_tap_time 10>
-                    , <&kp S &kp H &kp O &kp R &kp T>
-                    , <&macro_tap_time 500>
+                    = <&kp S &kp H &kp O &kp R &kp T>
                     , <&kp L &kp O &kp N &kp G>
                     ;
                 };
