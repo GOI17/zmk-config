@@ -9,8 +9,7 @@
                   tap-ms = <1>;
                   wait-ms = <1>;
                   bindings
-                    = <&kp U &kp n &kp b &kp r &kp o>
-                    , <&kp k &kp e &kp n &kp MINUS>
+                    = <&kp U &kp n &kp b &kp r &kp o &kp k &kp e &kp n &kp MINUS>
                     , <&kp J &kp o &kp l &kp l>
                     , <&kp i &kp n &kp e &kp s>
                     , <&kp s &kp EXCL &kp MINUS &kp S>
