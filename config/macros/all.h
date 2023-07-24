@@ -1,3 +1,7 @@
+#include <dt-bindings/zmk/keys.h>
+
+#include "utils.h"
+
 / {
   macros {
     create_macro(pwdmanager, &kp LS(M) &kp Y &kp LS(N) &kp A M &kp E &kp LS(I) &kp S &kp LS(G) &kp I)
