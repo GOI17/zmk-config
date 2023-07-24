@@ -3,6 +3,6 @@
 
 / {
   macros {
-    pwdmanager_macro;
-    login_macro;
+    pwdmanager: pwdmanager_macro;
+    login: login_macro;
 };
