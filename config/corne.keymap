@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // Macros
-#include "macros/all.h"
+# include "macros/all.h"
 
 // Layers
 #define BASE 0
