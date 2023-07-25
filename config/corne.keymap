@@ -42,6 +42,7 @@
                 , <&kp EXCLAMATION &kp MINUS>
                 , <&kp LS(S) &kp Q &kp U &kp E &kp A &kp L &kp E &kp R>
                 ;
+    };
     pwdmanager: pwdmanager {
              label = "ZM_pwdmanager_macro";
              compatible = "zmk,behavior-macro";
