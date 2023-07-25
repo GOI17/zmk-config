@@ -35,9 +35,7 @@
              label = "ZM_login_macro";
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             bindings
-                = <&kp u &kp n &kp b &kp r &kp o &kp k &kp e &kp n>
-                ;
+             bindings = <&kp U &kp N &kp B &kp R &kp O &kp K &kp E &kp N>;
     };
   };
 };
