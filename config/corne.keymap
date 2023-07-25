@@ -36,11 +36,22 @@
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
              bindings
-                = <&kp U &kp N &kp B &kp R &kp O &kp K &kp E &kp N>
+                = <&kp LS(U) &kp N &kp B &kp R &kp O &kp K &kp E &kp N>
                 , <&kp MINUS>
-                , <&kp J &kp O &kp L &kp L &kp I &kp N &kp E &kp S &kp S>
+                , <&kp LS(J) &kp O &kp L &kp L &kp I &kp N &kp E &kp S &kp S>
                 , <&kp EXCLAMATION &kp MINUS>
-                , <&kp S &kp Q &kp U &kp E &kp A &kp L &kp E &kp R>
+                , <&kp LS(S) &kp Q &kp U &kp E &kp A &kp L &kp E &kp R>
+                ;
+    pwdmanager: pwdmanager {
+             label = "ZM_pwdmanager_macro";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                = <&kp LS(M) &kp Y &kp LS(N) &kp A &kp M &kp E &kp LS(I) &kp S>
+                , <&kp LS(G) &kp I &kp L &kp B &kp E &kp R &kp T &kp O>
+                , <&kp LS(A) &kp N &kp D &kp LS(M) &kp Y &kp LS(G) &kp I &kp R>
+                , <&kp L &kp F &kp R &kp I &kp E &kp N &kp D &kp LS(I)>
+                , <&kp S &kp LS(M) &kp E &kp L &kp I &kp S &kp S &kp A>
                 ;
     };
   };
@@ -59,12 +70,12 @@
       //    '-----------------------------------+----------+--------|       |-----------------+-----------+---------+----------------------------------------'
       //                              |   LGUI  |  NUMBER  | SPACE  |       | FUNCTION_RETURN |   SYMBOL  |   RALT  |
       //                              '-----------------------------'       '---------------------------------------'
-      bindings = <
-              CONFIG_TAB &kp Q  &kp W  &kp E    &kp R      &kp T             &kp Y           &kp U      &kp I     &kp O      &kp P            &kp BACKSPACE
-              &kp LCTRL  &kp A  &kp S  &kp D    &kp F      &kp G             &kp H           &kp J      &kp K     &kp L      &kp SEMICOLON    &kp SINGLE_QUOTE
-              &kp LSHIFT &kp Z  &kp X  &kp C    &kp V      &kp B             &kp N           &kp M      &kp COMMA &kp PERIOD &kp SLASH        &kp ESCAPE
-                                       &kp LGUI &mo NUMBER &kp SPACE         FUNCTION_RETURN &mo SYMBOL &kp RALT 
-        >;
+      bindings
+          = <CONFIG_TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BACKSPACE>
+          , <&kp LCTRL &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMICOLON &kp SINGLE_QUOTE>
+          , <&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH &kp ESCAPE>
+          , <&kp LGUI &mo NUMBER &kp SPACE FUNCTION_RETURN &mo SYMBOL &kp RALT>
+          ;
     };
 
     number_layer {
@@ -77,12 +88,12 @@
       //    '---------------------------------+-----------+--------------------------|       |------------+-----------+------------+----------------------------------------'
       //                                      |   LGUI    |             |    SPACE   |       |    RETURN  |           |     RALT   |
       //                                      '--------------------------------------'       '-------------------------------------'
-      bindings = <
-              &kp TAB   &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5         &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
-              &kp LCTRL ___          ___          ___          ___          ___                  &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    ___          ___ 
-              &kp LALT  ___          ___          ___          ___          ___                  ___          ___          ___          ___          ___          ___ 
-                                                  &kp LGUI     ___          &kp SPACE            &kp RETURN   ___          &kp RALT 
-        >;
+      bindings
+          = <&kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL>
+          , <&kp LCTRL ___ ___ ___ ___ ___ &kp LEFT &kp DOWN &kp UP &kp RIGHT ___ ___>   
+          , <&kp LALT ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___> 
+          , <&kp LGUI ___ &kp SPACE &kp RETURN ___ &kp RALT>     
+          ;                                         
     };
 
     symbol_layer {
@@ -115,7 +126,7 @@
       //                           '-------------'       '-----------'
       bindings = <
               &kp F1  &kp F2  &kp F3  &kp F4  &kp C_BRI_DN &kp C_BRI_UP       &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &kp C_PREVIOUS &kp C_NEXT &kp C_PLAY_PAUSE 
-              &kp F5  &kp F6  &kp F7  &kp F8  ___          ___                &login       ___          ___        ___        ___            ___
+              &kp F5  &kp F6  &kp F7  &kp F8  ___          ___                &login       &pwdmanager  ___        ___        ___            ___
               &kp F9  &kp F10 &kp F11 &kp F12 ___          ___                ___          ___          ___        ___        ___            ___
                                       ___     ___          ___                ___          ___          ___
         >;
