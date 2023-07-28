@@ -35,8 +35,8 @@
              label = "ZM_login_macro";
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             wait-ms = <1>;
-             tap-ms = <1>;
+             wait-ms = <200>;
+             tap-ms = <200>;
              bindings
                 = <&kp LS(U) &kp N &kp B &kp R &kp O &kp K &kp E &kp N>
                 , <&kp MINUS>
@@ -49,8 +49,8 @@
              label = "ZM_pwdmanager_macro";
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
-             wait-ms = <1>;
-             tap-ms = <1>;
+             wait-ms = <200>;
+             tap-ms = <200>;
              bindings
                 = <&kp LS(M) &kp Y &kp LS(N) &kp A &kp M &kp E &kp LS(I) &kp S>
                 , <&kp LS(G) &kp I &kp L &kp B &kp E &kp R &kp T &kp O>
