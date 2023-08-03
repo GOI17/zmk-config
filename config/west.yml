@@ -1,17 +1,36 @@
+# manifest:
+# remotes:
+# - name: zmkfirmware
+# url-base: https://github.com/zmkfirmware
+# projects:
+# - name: zmk
+# remote: zmkfirmware
+# revision: main
+# import: app/west.yml
+# self:
+# path: config
+
 manifest:
   remotes:
-    # - name: zmkfirmware
-    # url-base: https://github.com/zmkfirmware
-    # - name: urob
-    # url-base: https://github.com/urob
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
-      #remote: urob
-      # remote: zmkfirmware
-      remote: petejohanson
-      revision: core/zephyr-3.4-update
+      remote: urob
+      revision: main
       import: app/west.yml
   self:
     path: config
+# manifest:
+# remotes:
+# - name: petejohanson
+# url-base: https://github.com/petejohanson
+# projects:
+# - name: zmk
+# remote: petejohanson
+# revision: core/zephyr-3.4-update
+# import: app/west.yml
+# self:
+# path: config
