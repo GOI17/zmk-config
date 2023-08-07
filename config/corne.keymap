@@ -29,6 +29,10 @@
 #define FUNCTION_RETURN &lt FUNCTION RETURN
 #define CONFIG_TAB &lt CONFIG TAB 
 
+&led_strip {
+    chain-length = <27>;
+};
+
 / {
   macros {
     login: login {
